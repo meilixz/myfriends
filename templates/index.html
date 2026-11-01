@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <h1>My Friends</h1>
+    <h2>This link leads you the list of my friends, see if your on it!</h2>
+    <h3>
+  <a href="/all_friends">All Friends</a>
+    </h3>
+      <h3>
+  <a href="/big_friends">Friends older than 13 years old</a>
+    </h3>
+      <h3>
+  <a href="/small_friends">Friends 13 years old and below</a>
+    </h3>
+
+    {% if list != "" %}
+         <h4>{{title}}</h4>
+         <ul>
+           {% for name in list %}
+             <li> {{name[0]}} , {{name[1]}}, {{name[2]}}</li>
+           {% endfor %}
+        </ul>
+
+         
+        
+    
+         
+    {% endif %}
+    
+</body>
+</html>
